@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
-#Displays the time for 12 hours
-i=0
-j=1
-while ((i <= 12)); do
-	echo Hour: $i
-	while ((j < 60)); do
-		echo $j
-		j=$((j+1))
-	done
-	j=1
-	i=$((i+1))
-done
+# supposed to be nested loop
+i="0"
+while [ "$i" -le $((60 * 12 + 59)) ]; do
+	if [ $((i % 60)) -eq 0 ]; then
+		echo "Hour: $((i / 60))"
+	else
+		echo "$((i % 60))"
+	fi;
+	i=$((i + 1))
+done;

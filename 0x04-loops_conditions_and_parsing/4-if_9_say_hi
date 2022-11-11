@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-#Prints best school ten times to stdout using a while loop. On the 9th time, prints Hi and a new line
-i=0
-while ((i<10)); do 
-	if [ "$i" == 9 ]; then
-	   	echo Hi 
-	fi 
-	echo best school 
-	i=$((i+1))
-done
+# using conditions in a loop
+i="1"
+while [ "$i" -le 10 ]; do
+	echo "Best School"
+	if [ "$i" -eq 9 ]; then
+		echo "Hi"
+	fi;
+	i=$((i + 1))
+done;

@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
-#Prints best school to stdout 10 times using a for loop.
-for ((i=0; i<10; i++)); do echo "best school"; done
+# Using for loop to print a string
+for i in $(seq 1 10); do
+	echo "Best School"
+	i="$((i))"
+done;
